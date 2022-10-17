@@ -1,0 +1,9 @@
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+    - sudo cp -r dist/* /var/www/html/vue/app/dist/
